@@ -1,0 +1,16 @@
+---
+- name: Perform Yum update on managed nodes
+  become: yes # This is crucial to run commands as root (required for yum update)
+  gather_facts: no # Not strictly necessary for a simple update, can speed things up slightly
+
+  tasks:
+    - name: Update all packages using yum
+      ansible.builtin.yum:
+        name: "*"         # "*" means all packages
+        state: latest     # Ensures packages are updated to the latest version
+        update_cache: yes # Forces a refresh of the yum metadata cache
+      register: yum_update_result
+
+    - name: Report yum update status
+      ansible.builtin.debug:
+        msg: "Yum update status: {{ yum_update_result }}"
