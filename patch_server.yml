@@ -1,5 +1,6 @@
 ---
 - name: Perform Yum update on managed nodes
+  hosts: all
   become: yes # This is crucial to run commands as root (required for yum update)
   gather_facts: no # Not strictly necessary for a simple update, can speed things up slightly
 
