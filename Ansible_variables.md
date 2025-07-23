@@ -171,4 +171,3 @@ ansible-playbook -i inventory/hosts.ini playbooks/group_vars.yml
 
 ---
 
-Would you like this delivered as a ready-to-download `.zip` file or GitHub repo structure? I can give you a complete README too.
