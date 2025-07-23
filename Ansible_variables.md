@@ -14,18 +14,18 @@
 
 ```
 ansible-vars-demo/
-├── inventory/
+├── inventory
+│   ├── group_vars
+│   │   ├── dbservers.yml
+│   │   └── webservers.yml
 │   └── hosts.ini
-├── group_vars/
-│   ├── webservers.yml
-│   └── dbservers.yml
-├── vars/
-│   └── external_vars.yml
-├── playbooks/
-    ├── inline_vars.yml
-    ├── external_vars.yml
-    ├── command_line_vars.yml
-    └── group_vars.yml
+├── playbooks
+│   ├── command_line_vars.yml
+│   ├── external_vars.yml
+│   ├── group_vars.yml
+│   └── inline_vars.yml
+└── vars
+    └── external_vars.yml
 
 ```
 
