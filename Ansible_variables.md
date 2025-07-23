@@ -1,7 +1,16 @@
 
 ---
+# 🧩 Ansible Variables – Simple Guide
 
-## ✅ Updated Directory Structure (with real use cases)
+### 🔶 What are Variables?
+- Variables in Ansible let you store values (like names, paths, IPs) so you don’t repeat them everywhere.
+
+### ✅ Why Use Variables?
+ - To avoid repeating values (e.g. server names, ports)
+ - To make your playbooks flexible
+ - To change behavior based on host/group
+
+## ✅ Example Directory Structure
 
 ```
 ansible-vars-demo/
@@ -30,7 +39,7 @@ ansible-vars-demo/
   become: true
 
   vars:
-    package_name: tree
+    package_name: nginx
     welcome_message: "Installing {{ package_name }} using inline variables"
 
   tasks:
@@ -88,10 +97,6 @@ external_package: vim
   become: true
 
   tasks:
-    - name: Show command-line message
-      ansible.builtin.debug:
-        msg: "{{ custom_message }}"
-
     - name: Install package from CLI var
       ansible.builtin.yum:
         name: "{{ cli_package }}"
@@ -101,7 +106,7 @@ external_package: vim
 ### ▶️ Run this with:
 
 ```bash
-ansible-playbook -i inventory/hosts.ini playbooks/command_line_vars.yml -e "custom_message='Hello from CLI' cli_package=curl"
+ansible-playbook -i inventory/hosts.ini playbooks/command_line_vars.yml -e "cli_package=curl"
 ```
 
 > 🎯 **Purpose:** Show how variables passed with `-e` override or inject values at runtime.
