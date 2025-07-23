@@ -13,11 +13,11 @@ ansible-vars-demo/
 ├── vars/
 │   └── external_vars.yml
 ├── playbooks/
-│   ├── inline_vars.yml
-│   ├── external_vars.yml
-│   ├── command_line_vars.yml
-│   └── group_vars.yml
-└── README.md
+    ├── inline_vars.yml
+    ├── external_vars.yml
+    ├── command_line_vars.yml
+    └── group_vars.yml
+
 ```
 
 ---
