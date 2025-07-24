@@ -1,6 +1,6 @@
 
 ---
-# 🧩 Ansible Variables – Simple Guide
+# 🧩 Ansible Variables 
 
 ### 🔶 What are Variables?
 - Variables in Ansible let you store values (like names, paths, IPs) so you don’t repeat them everywhere.
