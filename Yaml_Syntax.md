@@ -13,16 +13,6 @@
 #### 🔹 Where is YAML used?
 YAML is widely used to define CI/CD pipelines in tools like Jenkins, GitLab CI/CD, GitHub Actions, and Azure Pipelines
 
-#### 🔹 Why not plain text?
-* Text files have no fixed standard, leading to inconsistent formatting.
-
-Why YAML over JSON?
-
-* YAML is easier to read and write for humans.
-
-* Follows a strict syntax, reducing errors.
-
-
 
 ---
 
