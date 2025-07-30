@@ -1,6 +1,6 @@
 ---
 - name: Install and start Apache web server
-  hosts: webservers
+  hosts: all
   become: yes  # escalates to root (if needed)
   tasks:
     - name: Install httpd
