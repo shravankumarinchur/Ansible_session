@@ -1,0 +1,8 @@
+---
+- name: print message
+hosts: all
+  become: yes 
+  tasks:
+    - name: Print Hello World
+      debug:
+        msg: "Hello, World, this is 2nd new pb"
